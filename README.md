@@ -18,3 +18,16 @@ stow bash
 
 Reference:
 http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
+
+On a new machine you can just clone the repo and do the `stow` commands
+
+Tracked configs:
+bspwm  - tiling window manager
+dunst - notification daemon 
+kitty - terminal 
+nvim - editor
+polybar - toolbar on bottom of screen
+sxhkd - keyboard hotkey shortcuts 
+ulauncher - app launcher
+
+TODO: Quick script to stow all the things
