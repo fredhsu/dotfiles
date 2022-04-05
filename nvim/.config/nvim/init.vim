@@ -77,7 +77,7 @@ Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
-let g:ale_linters = {'rust': ['analyzer']}
+"let g:ale_linters = {'rust': ['analyzer']}
 
 " run rustfmt on save
 let g:rustfmt_autosave = 1
@@ -123,6 +123,7 @@ set shortmess+=c
 " rust-tools will configure and enable certain LSP features for us.
 " See https://github.com/simrat39/rust-tools.nvim#configuration
 lua <<EOF
+
 local nvim_lsp = require'lspconfig'
 
 local opts = {
@@ -130,9 +131,11 @@ local opts = {
         autoSetHints = true,
         hover_with_actions = true,
         inlay_hints = {
-            show_parameter_hints = false,
-            parameter_hints_prefix = "",
-            other_hints_prefix = "",
+			--only_current_line = true,
+			show_parameter_hints = true,
+            -- show_parameter_hints = false,
+            -- parameter_hints_prefix = "",
+            -- other_hints_prefix = "",
         },
     },
 
@@ -156,7 +159,7 @@ local opts = {
 }
 
 require('rust-tools').setup(opts)
-require('rust-tools.inlay_hints').set_inlay_hints()
+--require('rust-tools.inlay_hints').set_inlay_hints()
 EOF
 
 " Setup Completion
