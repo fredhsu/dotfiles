@@ -124,19 +124,19 @@ set shortmess+=c
 " See https://github.com/simrat39/rust-tools.nvim#configuration
 lua <<EOF
 
-local nvim_lsp = require'lspconfig'
+-- local nvim_lsp = require'lspconfig'
 
 local opts = {
     tools = { -- rust-tools options
         autoSetHints = true,
         hover_with_actions = true,
-        inlay_hints = {
+        -- inlay_hints = {
 			--only_current_line = true,
-			show_parameter_hints = true,
+		--	show_parameter_hints = true,
             -- show_parameter_hints = false,
             -- parameter_hints_prefix = "",
             -- other_hints_prefix = "",
-        },
+        --},
     },
 
     -- all the opts to send to nvim-lspconfig
@@ -158,7 +158,8 @@ local opts = {
     },
 }
 
-require('rust-tools').setup(opts)
+-- require('rust-tools').setup(opts)
+require('rust-tools').setup({})
 --require('rust-tools.inlay_hints').set_inlay_hints()
 EOF
 
