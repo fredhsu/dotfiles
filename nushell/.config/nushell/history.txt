@@ -1,0 +1,19 @@
+ls
+cd dotfiles/
+ls
+cat README.md
+ls ~/.config
+mkdir -p nushell/.config
+mkdir --help
+mkdir nushell/.config
+yarn
+node --version
+npm install yarn
+yarn --version
+yarn
+npm install --global yarn
+sudo npm install --global yarn
+yarn
+ls
+rm yarn.lock
+rm *.json
