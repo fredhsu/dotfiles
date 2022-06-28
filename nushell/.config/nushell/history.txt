@@ -17,3 +17,33 @@ yarn
 ls
 rm yarn.lock
 rm *.json
+git add .
+git commit -m "adding nushell"
+git push
+cd
+mkdir js
+cd js
+yarn create redwood-app --ts ./redwoodblog
+nvm
+yay -S nvm
+nvm
+  echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc
+  echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.config/fish/config.fish
+ls
+cd js
+ls
+!yarn
+yarn create redwood-app --ts ./redwoodblog
+which node
+node --version
+bash
+which node
+node --version
+bash nvm 
+bash
+$nu.env-path
+vim .config/nu
+vim .config/nushell/env.nu
+starship
+vim .config/nushell/config.nu
+cd dotfiles/
