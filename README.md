@@ -22,12 +22,15 @@ http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfile
 On a new machine you can just clone the repo and do the `stow` commands
 
 Tracked configs:
-bspwm  - tiling window manager
-dunst - notification daemon 
-kitty - terminal 
-nvim - editor
-polybar - toolbar on bottom of screen
-sxhkd - keyboard hotkey shortcuts 
-ulauncher - app launcher
+* bspwm  - tiling window manager
+* dunst - notification daemon 
+* kitty - terminal 
+* alacritty - terminal 
+* nvim - editor
+* polybar - toolbar on bottom of screen
+* sxhkd - keyboard hotkey shortcuts 
+* ulauncher - app launcher
+* nushell - playing around with alternative shell
 
 TODO: Quick script to stow all the things
+Side node: starship with Fish shell by default
