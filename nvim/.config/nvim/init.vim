@@ -9,6 +9,8 @@ set tabstop=4
 set noexpandtab
 set autoread
 
+set nofoldenable " disable folding
+
 " Install vim-plug if it isn't there
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
