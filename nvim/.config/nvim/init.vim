@@ -11,6 +11,8 @@ set autoread
 
 set nofoldenable " disable folding
 
+set list
+
 " Install vim-plug if it isn't there
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -22,7 +24,7 @@ endif
 
 call plug#begin()
 
-" GUI 
+" GUI
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
@@ -108,8 +110,7 @@ autocmd vimenter * ++nested colorscheme nord
 set relativenumber
 set number
 
-set listchars=nbsp:¬,extends:»,precedes:«,trail:•
-
+"set listchars=nbsp:¬,extends:»,precedes:«,trail:•
 
 " Set completeopt to have a better completion experience
 " :help completeopt
@@ -131,7 +132,7 @@ lua <<EOF
 local opts = {
     tools = { -- rust-tools options
         autoSetHints = true,
-        hover_with_actions = true,
+        --hover_with_actions = true,
         -- inlay_hints = {
 			--only_current_line = true,
 		--	show_parameter_hints = true,
@@ -141,6 +142,9 @@ local opts = {
         --},
     },
 
+	hover_actions = {
+		auto_focus = true,
+	},
     -- all the opts to send to nvim-lspconfig
     -- these override the defaults set by rust-tools.nvim
     -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
@@ -155,13 +159,20 @@ local opts = {
                 checkOnSave = {
                     command = "clippy"
                 },
+				imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
+            },
             }
         }
     },
 }
 
--- require('rust-tools').setup(opts)
-require('rust-tools').setup({})
+require('rust-tools').setup(opts)
+--require'rust-tools'.hover_actions.hover_actions()
+--require('rust-tools').setup({})
 --require('rust-tools.inlay_hints').set_inlay_hints()
 EOF
 
@@ -247,4 +258,5 @@ require'nvim-web-devicons'.setup {
 }
 EOF
 
-
+" For mouse support
+set mouse=a
