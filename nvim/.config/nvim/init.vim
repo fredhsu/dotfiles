@@ -6,7 +6,7 @@ filetype off
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set noexpandtab
+set expandtab
 set autoread
 
 set nofoldenable " disable folding
@@ -174,6 +174,7 @@ require('rust-tools').setup(opts)
 --require'rust-tools'.hover_actions.hover_actions()
 --require('rust-tools').setup({})
 --require('rust-tools.inlay_hints').set_inlay_hints()
+require'lspconfig'.hls.setup{}
 EOF
 
 " Setup Completion
@@ -260,3 +261,5 @@ EOF
 
 " For mouse support
 set mouse=a
+
+
