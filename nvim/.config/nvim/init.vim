@@ -79,6 +79,7 @@ Plug 'github/copilot.vim'
 " Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
 
+
 call plug#end()
 
 "let g:ale_linters = {'rust': ['analyzer']}
